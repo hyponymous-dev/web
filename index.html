@@ -1,1 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hyponymous</title>
 
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: background 0.3s ease;
+    }
+
+    body.dark {
+        background: black;
+    }
+
+    img {
+        width: 300px;
+        cursor: pointer;
+        transition: filter 0.3s ease;
+    }
+</style>
+</head>
+
+<body>
+
+<img id="logo" src="logo-black.png" alt="Hyponymous Logo">
+
+<script>
+    const body = document.body;
+    const logo = document.getElementById("logo");
+
+    logo.addEventListener("click", () => {
+        body.classList.toggle("dark");
+
+        if (body.classList.contains("dark")) {
+            logo.src = "h2";
+        } else {
+            logo.src = "h1.png";
+        }
+    });
+</script>
+
+</body>
+</html>
